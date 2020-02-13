@@ -1,5 +1,7 @@
 // colour from the frontend toolkit
 $mellow-red: #df3034;
+$text-colour: #0b0c0c;
+$secondary-text-colour: #6f777b;
 
 form {
   margin-bottom: 60px;
@@ -7,6 +9,42 @@ form {
   &.table-filter {
     margin-bottom: 0px;
   }
+  fieldset {
+    width: 100%;
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+
+  legend {
+    overflow: hidden;
+    box-sizing: border-box;
+    max-width: 100%;
+    display: table;
+  }
+
+  .form-hint {
+    font-family: "nta", Arial, sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.25;
+    display: block;
+    color: #6f777b;
+    font-weight: normal;
+    margin-top: -2px;
+    padding-bottom: 2px;
+
+    @media (min-width: 641px){
+      .form-hint {
+          font-size: 19px;
+          line-height: 1.31579;
+      }
+    }
+  }
+
 
   label {
     display: block;
@@ -62,4 +100,15 @@ form.button_to {
   a.btn, input.btn {
     margin-right: 10px;
   }
+}
+
+.form-date .form-group {
+  float: left;
+  width: 50px;
+  margin-right: 20px;
+  margin-bottom: 0;
+  clear: none;
+}
+.form-date .form-group-year {
+  width: 70px;
 }
