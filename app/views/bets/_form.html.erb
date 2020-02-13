@@ -15,6 +15,32 @@
     <%= f.text_area :comment, class: "form-control input-lg" %>
   </div>
 
+  <div class="form-group">
+    <fieldset>
+      <legend>
+        <h3>
+          Set expiery date
+        </h3>
+        <span class="form-hint">For example, 31 3 2020</span>
+      </legend>
+      <div class="form-date">
+        <div class="form-group">
+          <%= f.text_field :query, class: "form-group form-group-day", pattern:"[0-9]*", inputmode:"numeric" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :query, class: "form-group form-group-month", pattern:"[0-9]*", inputmode:"numeric" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :query, class: "form-group form-group-year", pattern:"[0-9]*", inputmode:"numeric" %>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  <p>or</p>
+  <div class="form-group">
+    <%= f.check_box :is_worst, label: 'Make permanent?' %>
+  </div>
+
   <%= f.hidden_field :query_id, value: query.id %>
 
   <%= f.button "Save", class: "btn btn-success btn-lg" %>
