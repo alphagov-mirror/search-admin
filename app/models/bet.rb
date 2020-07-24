@@ -37,7 +37,7 @@ class Bet < ApplicationRecord
     if expiration_date.nil?
       self.expiration_date = default_expiration_date
       self.permanent = false
-      save
+      save!
     end
   end
 
